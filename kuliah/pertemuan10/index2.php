@@ -15,6 +15,9 @@ $peternakan = query("SELECT * FROM peternakan");
 
 <body>
   <h2>Daftar Hewan Ternak</h2>
+  <br>
+  <a href="tambah.php">Tambah data hewan ternak</a>
+  <br><br>
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>

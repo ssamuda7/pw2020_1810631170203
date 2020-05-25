@@ -25,3 +25,24 @@ function query($query)
 
   return $rows;
 }
+
+function tambah($data)
+{
+  $conn = koneksi();
+  $gambar = htmlspecialchars($data['gambar']);
+  $kd_barang = htmlspecialchars($data['kd_barang']);
+  $nm_barang = htmlspecialchars($data['nm_barang']);
+  $jml = htmlspecialchars($data['jml']);
+  $harga = htmlspecialchars($data['harga']);
+
+  $query = "INSERT INTO
+              peternakan
+            VALUES
+            (null, '$gambar', '$kd_barang', '$nm_barang', '$jml', '$harga')";
+
+  mysqli_query($conn, $query);
+
+  echo mysqli_error($conn);
+
+  return mysqli_affected_rows($conn);
+}
