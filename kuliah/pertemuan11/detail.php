@@ -26,7 +26,7 @@ $p = query("SELECT * FROM peternakan WHERE id = $id");
     <li>Nama : <?= $p['nm_barang']; ?></li>
     <li>Jumlah Tersedia : <?= $p['jml']; ?></li>
     <li>Harga : <?= $p['harga']; ?></li>
-    <li><a href="">ubah</a> | <a href="hapus.php?id=<?= $p['id']; ?>">hapus</a></li>
+    <li><a href="ubah.php?id=<?= $p['id']; ?>">ubah</a> | <a href="hapus.php?id=<?= $p['id']; ?> " onclick="return confirm('apakah anda sudah yakin?');">hapus</a></li>
     <li><a href="index.php">Kembali</a></li>
   </ul>
 </body>
